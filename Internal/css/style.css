@@ -1,0 +1,82 @@
+@charset"UTF-8";
+
+/*
+ * Bootstrap Image Gallery Demo CSS 3.0.0
+ * https://github.com/blueimp/Bootstrap-Image-Gallery
+ *
+ * Copyright 2013, Sebastian Tschan
+ * https://blueimp.net
+ *
+ * Licensed under the MIT license:
+ * http://www.opensource.org/licenses/MIT
+ */
+ body {
+    padding-top: 60px;
+    background: #fff;
+    color: #000;
+}
+h1 {
+    font-family:"Lucida Grande", "Lucida Sans Unicode", Arial, sans-serif;
+}
+a {
+	color: #03F;
+}
+a:hover {
+    color: lightblue;
+    text-decoration: none;
+}
+.modal {
+    overflow: auto;
+    color: #333;
+}
+/**
+ * design shack - Use Pseudo Elements to Create an Image Stack Illusion
+ */
+* {
+    margin: 0;
+    padding: 0;
+}
+div[class*='stack'] {
+    float: left;
+    position: relative;
+    margin: 50px;
+}
+div[class*='stack'], div[class*='stack']:before, div[class*='stack']:after {
+    border: 6px solid #fff;
+    height: 219px;
+    width: 350px;
+    -webkit-box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+    -moz-box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+}
+div[class*='stack']:before, div[class*='stack']:after {
+    background: #768590;
+    content:"";
+    position: absolute;
+    z-index: -1;
+    /*Dirty IE8 hack*/
+    height: 0px\9;
+    width: 0px\9;
+    border: none\9;
+}
+div[class*='stack']:before {
+    background: #eff4de;
+}
+.stacktwo:before {
+    top: 0px;
+    left: -10px;
+    -webkit-transform: rotate(-5deg);
+    -moz-transform: rotate(-5deg);
+    -o-transform: rotate(-5deg);
+    -ms-transform: rotate(-5deg);
+    transform: rotate(-5deg);
+}
+.stacktwo:after {
+    top: 5px;
+    left: 0px;
+    -webkit-transform: rotate(4deg);
+    -moz-transform: rotate(4deg);
+    -o-transform: rotate(4deg);
+    -ms-transform: rotate(4deg);
+    transform: rotate(4deg);
+}
