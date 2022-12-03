@@ -2,7 +2,7 @@
 
 if(isset($_POST['submit'])){
  
-  $db = mysqli_connect('localhost','lumbinis_sharangika','GRSPerera@86','lumbinis_OL_Student_Registration')
+  $db = mysqli_connect('localhost','','','')
  or die('Error connecting to MySQL server.');
 
 
