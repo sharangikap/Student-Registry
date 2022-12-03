@@ -3,7 +3,7 @@
 
  $id = $_POST['password'];
  if(!empty($id)){
- $db = mysqli_connect('localhost','lumbinis_sharangika','GRSPerera@86','lumbinis_OL_Student_Registration')
+ $db = mysqli_connect('localhost','','','')
  or die('Error connecting to MySQL server.');
  
 $sql = "SELECT * FROM S_Detail WHERE IndexNo=$id";
